@@ -182,7 +182,150 @@ namespace _10_11_2024_31231023065
                 Console.WriteLine("Travel speed is: " + (distance / time) + "(miles/h)");
                 Console.WriteLine("Or " + (distance / time)/0.621371 + "(km/h)");
             }
+        public static void Question6()
+        {
+            Console.Write("Enter a number: ");
+            int n = int.Parse(Console.ReadLine());
+            for (int i = 1; i <= 10; i++)
+            {
+                float result = n * i;
+                Console.WriteLine($"{n} x {i} = {result}");
+            }
+            Console.ReadKey();
         }
-
+        public static void Question7()
+        {
+            Console.WriteLine("Enter the pattern number that you want to see (1, 2, 3): ");
+            int n = int.Parse(Console.ReadLine());
+            switch (n)
+            {
+                case 1:
+                    Console.Write("Insert the rows: ");
+                    int rows = int.Parse(Console.ReadLine());
+                    for (int i = 1; i <= rows; i++)
+                    {
+                        for (int j = 1; j <= i; j++)
+                        {
+                            Console.Write(j);
+                        }
+                        Console.WriteLine();
+                    }
+                    break;
+                case 2:
+                    int k = 1;
+                    Console.Write("Insert the rows: ");
+                    int row1s = int.Parse(Console.ReadLine());
+                    for (int i = 1; i <= row1s; i++)
+                    {
+                        for (int j = 1; j <= i; j++)
+                        {
+                            Console.Write($"{k} ");
+                            k++;
+                        }
+                        Console.WriteLine();
+                    }
+                    break;
+                case 3:
+                    int k1 = 1;
+                    Console.Write("Insert the rows: ");
+                    int row2s = int.Parse(Console.ReadLine());
+                    int space = row2s + 4 - 1;
+                    for (int i = 1; i <= row2s; i++)
+                    {
+                        for (int spc = space; spc >= 1; spc--)
+                            Console.Write(" ");
+                        for (int j = 1; j <= i; j++)
+                        {
+                            Console.Write($"{k1} ");
+                            k1++;
+                        }
+                        Console.WriteLine();
+                        space--;
+                    }
+                    break;
+            }          
+            Console.ReadKey(); 
+        }
+        public static void Question8()
+        {
+            float s = 0;
+            Console.Write("Enter a number: ");
+            int n = int.Parse(Console.ReadLine());
+            for (int i = 1; i <= n; i++)
+            {
+                if (i < n)
+                {
+                    Console.Write($"1/{i} + ");
+                    s += (float)1 / i;
+                }
+                else if (i == n)
+                {
+                    Console.Write($"1/{i}");
+                    s += (float)1 / i;
+                }
+            }
+            Console.WriteLine();
+            Console.WriteLine("Sum of the series upto {0} terms: {1}", n, s);
+            Console.ReadKey();
+        }
+        public static void Question9()
+        {
+            Console.Write("Insert the start of the range: ");
+            int start = int.Parse(Console.ReadLine());
+            Console.Write("Insert the end of the range: ");
+            int end = int.Parse(Console.ReadLine());
+            for (int i = start; i <= end; i++)
+            {
+                int kq = 0;
+                for (int j = 1; j < i; j++)
+                {
+                    if (i % j == 0)
+                        kq += j;
+                }
+                if (i == kq)
+                    Console.WriteLine("{0} is the perfect number", i);
+            }
+            Console.ReadKey();
+        }
+        public static void Question10()
+        {
+            int demUoc = 0;
+            Console.Write("Enter a number: ");
+            int n = int.Parse(Console.ReadLine());
+            for (int i = 1; i <= n; i++)
+            {
+                if (n % i == 0)
+                    demUoc++;
+            }
+            if (demUoc == 2)
+                Console.WriteLine($"{n} is a prime number");
+            else
+                Console.WriteLine($"{n} is not a prime number");
+            Console.ReadKey();
+        }
+        public static void Question11()
+        {
+            for (int y = -5; y <= 5; y++)
+            {
+                int x = y*y + 2*y + 1;
+                Console.WriteLine("Certain value of function x when y = {0} la: {1}",y,x);
+            }
+            Console.ReadKey();
+        }
+        public static void Question12() 
+        {
+            /*Console.Write("Input the character: ");
+            if (c == 'a' || c == 'e' || c == 'o' || c == 'u' || c == 'i'|| c == 'A' || c == 'E' || c == 'O' || c == 'U' || c == 'I')
+            {
+                Console.WriteLine("The character you insert is vowel");
+            }
+            else if (char.IsDigit(c))
+            {
+                Console.WriteLine("The character you insert is digit");
+            }
+            else
+                Console.WriteLine("The character you insert is other symbol"); */
+        }
     }
 }
+        

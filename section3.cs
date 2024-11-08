@@ -9,7 +9,7 @@ namespace BuiLeMinhPhat_31231023065
 {
     internal class Section_03
     {
-        public static void Main()
+        public static void Main3()
         {
             Excercise_01();
             Excercise_02();

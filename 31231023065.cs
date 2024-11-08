@@ -1,7 +1,7 @@
 ﻿namespace BuiLeMinhPhat {
     internal class Section_2
     {
-        public static void Main()
+        public static void Main2()
         {
             Question_1();
             Question_2();

@@ -8,7 +8,7 @@ namespace _10_11_2024_31231023065
 {
     internal class section4
     {
-        public static void Main()
+        public static void Main4()
         {
             Question5();
             Console.WriteLine("Press any key to stop");
@@ -161,27 +161,28 @@ namespace _10_11_2024_31231023065
             int distance = int.Parse(Console.ReadLine());
             Console.Write("Is the distance in kilometer or mile (k/m)?");
             string unit = Console.ReadLine();
-            
+
             // Time
             Console.Write("Input travel hours: ");
             int h = int.Parse(Console.ReadLine());
             Console.Write("Input travel minutes: ");
-            int m = int.Parse(Console.ReadLine()); 
+            int m = int.Parse(Console.ReadLine());
             Console.Write("Input travel seconds: ");
             int s = int.Parse(Console.ReadLine());
             float time = h + m / 60 + s / 3600;
-            
+
             // Output
-            if (unit == "k" || unit =="K")
-            { 
+            if (unit == "k" || unit == "K")
+            {
                 Console.WriteLine("Travel speed is: " + (distance / time) + "(km/h)");
-                Console.WriteLine("Or " + (distance / time)*0.621371 + "(miles/h)");
+                Console.WriteLine("Or " + (distance / time) * 0.621371 + "(miles/h)");
             }
             else if (unit == "m" || unit == "M")
-            { 
+            {
                 Console.WriteLine("Travel speed is: " + (distance / time) + "(miles/h)");
-                Console.WriteLine("Or " + (distance / time)/0.621371 + "(km/h)");
+                Console.WriteLine("Or " + (distance / time) / 0.621371 + "(km/h)");
             }
+        }
         public static void Question6()
         {
             Console.Write("Enter a number: ");
